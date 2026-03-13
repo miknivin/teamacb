@@ -44,46 +44,17 @@ import detPowder18 from '../../assets/detergent powder/sunveel-powder-package-6k
 import detPowder19 from '../../assets/detergent powder/wanto 4 kg  mockup copy.jpg';
 import detPowder20 from '../../assets/detergent powder/wanto 99 ₹ mockup copy_page-0001.jpg';
 
-const filters = ["All", "Laundry Soaps", "Cleaning Liquids", "Detergent Powders"];
+const filters = ["All", "Detergent Powders", "Laundry Soaps", "Cleaning Liquids"];
 
 const liquidSubcategories = [
+  "Detergent Liquid",
   "Hand Wash Liquid",
   "Dish Wash Liquid",
-  "Detergent Liquid",
   "Toilet Cleaner",
   "Floor Cleaner"
 ];
 
 const mockProducts = [
-  // Laundry Soaps
-  { id: 101, name: "Mulla Power Wash Soap", category: "Laundry Soaps", subcategory: null, image: laundrySoap1, variants: ["225 g"] },
-  { id: 102, name: "Mulla Power Wash Soap", category: "Laundry Soaps", subcategory: null, image: laundrySoap2, variants: ["500 g"] },
-  { id: 103, name: "Mulla Colour XL900", category: "Laundry Soaps", subcategory: null, image: laundrySoap3, variants: ["900 g"] },
-  { id: 104, name: "Sunveel XL", category: "Laundry Soaps", subcategory: null, image: laundrySoap4, variants: ["1 Pc"] },
-
-  // Cleaning Liquids - Hand Wash
-  { id: 201, name: "Mulla Herbal Hand Wash", category: "Cleaning Liquids", subcategory: "Hand Wash Liquid", image: handWash1, variants: ["250 ml"] },
-  { id: 202, name: "Mulla Blue Hand Wash", category: "Cleaning Liquids", subcategory: "Hand Wash Liquid", image: handWash2, variants: ["250 ml"] },
-  { id: 203, name: "Mulla Orange Hand Wash", category: "Cleaning Liquids", subcategory: "Hand Wash Liquid", image: handWash3, variants: ["250 ml"] },
-
-  // Cleaning Liquids - Dish Wash
-  { id: 204, name: "Mulla Dishwash Liquid", category: "Cleaning Liquids", subcategory: "Dish Wash Liquid", image: dishWash1, variants: ["500 ml"] },
-  { id: 205, name: "Mulla Dish Wash Crystal", category: "Cleaning Liquids", subcategory: "Dish Wash Liquid", image: dishWash2, variants: ["1 L"] },
-
-  // Cleaning Liquids - Detergent Liquid
-  { id: 206, name: "Sunveel Detergent Liquid", category: "Cleaning Liquids", subcategory: "Detergent Liquid", image: detLiquid1, variants: ["1 Kg"] },
-  { id: 207, name: "Sunveel Detergent Liquid", category: "Cleaning Liquids", subcategory: "Detergent Liquid", image: detLiquid2, variants: ["3 Kg"] },
-  { id: 208, name: "Sunveel Detergent Liquid", category: "Cleaning Liquids", subcategory: "Detergent Liquid", image: detLiquid3, variants: ["5 Kg"] },
-  { id: 209, name: "Mulla Detergent Liquid", category: "Cleaning Liquids", subcategory: "Detergent Liquid", image: detLiquid4, variants: ["1 Kg"] },
-
-  // Cleaning Liquids - Toilet Cleaner
-  { id: 210, name: "Toilet Cleaner", category: "Cleaning Liquids", subcategory: "Toilet Cleaner", image: toiletCleaner1, variants: ["500 ml", "1 L"] },
-
-  // Cleaning Liquids - Floor Cleaner
-  { id: 211, name: "Phenyl Orange", category: "Cleaning Liquids", subcategory: "Floor Cleaner", image: floorCleaner1, variants: ["1 L"] },
-  { id: 212, name: "Phenyl Pink", category: "Cleaning Liquids", subcategory: "Floor Cleaner", image: floorCleaner2, variants: ["1 L"] },
-  { id: 213, name: "Phenyl Yellow", category: "Cleaning Liquids", subcategory: "Floor Cleaner", image: floorCleaner3, variants: ["1 L"] },
-
   // Detergent Powders
   { id: 301, name: "Libas Powder", category: "Detergent Powders", subcategory: null, image: detPowder1, variants: ["1 Kg"] },
   { id: 302, name: "Libas Powder", category: "Detergent Powders", subcategory: null, image: detPowder2, variants: ["2 Kg"] },
@@ -104,7 +75,36 @@ const mockProducts = [
   { id: 317, name: "Sunveel Powder", category: "Detergent Powders", subcategory: null, image: detPowder17, variants: ["500 g"] },
   { id: 318, name: "Sunveel Powder", category: "Detergent Powders", subcategory: null, image: detPowder18, variants: ["6 Kg"] },
   { id: 319, name: "Wanto Powder", category: "Detergent Powders", subcategory: null, image: detPowder19, variants: ["4 Kg"] },
-  { id: 320, name: "Wanto Powder", category: "Detergent Powders", subcategory: null, image: detPowder20, variants: ["99 ₹"] }
+  { id: 320, name: "Wanto Powder", category: "Detergent Powders", subcategory: null, image: detPowder20, variants: ["99 ₹"] },
+
+  // Cleaning Liquids - Detergent Liquid
+  { id: 206, name: "Sunveel Detergent Liquid", category: "Cleaning Liquids", subcategory: "Detergent Liquid", image: detLiquid1, variants: ["1 Kg"] },
+  { id: 207, name: "Sunveel Detergent Liquid", category: "Cleaning Liquids", subcategory: "Detergent Liquid", image: detLiquid2, variants: ["3 Kg"] },
+  { id: 208, name: "Sunveel Detergent Liquid", category: "Cleaning Liquids", subcategory: "Detergent Liquid", image: detLiquid3, variants: ["5 Kg"] },
+  { id: 209, name: "Mulla Detergent Liquid", category: "Cleaning Liquids", subcategory: "Detergent Liquid", image: detLiquid4, variants: ["1 Kg"] },
+
+  // Cleaning Liquids - Hand Wash
+  { id: 201, name: "Mulla Herbal Hand Wash", category: "Cleaning Liquids", subcategory: "Hand Wash Liquid", image: handWash1, variants: ["250 ml"] },
+  { id: 202, name: "Mulla Blue Hand Wash", category: "Cleaning Liquids", subcategory: "Hand Wash Liquid", image: handWash2, variants: ["250 ml"] },
+  { id: 203, name: "Mulla Orange Hand Wash", category: "Cleaning Liquids", subcategory: "Hand Wash Liquid", image: handWash3, variants: ["250 ml"] },
+
+  // Cleaning Liquids - Dish Wash
+  { id: 204, name: "Mulla Dishwash Liquid", category: "Cleaning Liquids", subcategory: "Dish Wash Liquid", image: dishWash1, variants: ["500 ml"] },
+  { id: 205, name: "Mulla Dish Wash Crystal", category: "Cleaning Liquids", subcategory: "Dish Wash Liquid", image: dishWash2, variants: ["1 L"] },
+
+  // Cleaning Liquids - Toilet Cleaner
+  { id: 210, name: "Toilet Cleaner", category: "Cleaning Liquids", subcategory: "Toilet Cleaner", image: toiletCleaner1, variants: ["500 ml", "1 L"] },
+
+  // Cleaning Liquids - Floor Cleaner
+  { id: 211, name: "Phenyl Orange", category: "Cleaning Liquids", subcategory: "Floor Cleaner", image: floorCleaner1, variants: ["1 L"] },
+  { id: 212, name: "Phenyl Pink", category: "Cleaning Liquids", subcategory: "Floor Cleaner", image: floorCleaner2, variants: ["1 L"] },
+  { id: 213, name: "Phenyl Yellow", category: "Cleaning Liquids", subcategory: "Floor Cleaner", image: floorCleaner3, variants: ["1 L"] },
+
+  // Laundry Soaps
+  { id: 101, name: "Mulla Power Wash Soap", category: "Laundry Soaps", subcategory: null, image: laundrySoap1, variants: ["225 g"] },
+  { id: 102, name: "Mulla Power Wash Soap", category: "Laundry Soaps", subcategory: null, image: laundrySoap2, variants: ["500 g"] },
+  { id: 103, name: "Mulla Colour XL900", category: "Laundry Soaps", subcategory: null, image: laundrySoap3, variants: ["900 g"] },
+  { id: 104, name: "Sunveel XL", category: "Laundry Soaps", subcategory: null, image: laundrySoap4, variants: ["1 Pc"] }
 ];
 
 export default function OurProducts() {
