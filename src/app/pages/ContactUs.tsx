@@ -9,7 +9,7 @@ export default function ContactUs() {
     setIsSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
-    const emailTo = "alfinreji10@gmail.com"; // Updated recipient email
+    const emailTo = "acbenterprises16@gmail.com"; // Updated recipient email
 
     try {
       const response = await fetch(`https://formsubmit.co/ajax/${emailTo}`, {
